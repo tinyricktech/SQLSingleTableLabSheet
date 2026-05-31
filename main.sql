@@ -1,7 +1,17 @@
 
--- Single Table Lab Sheet
+-- @database elvdatabase.db
 
-CREATE TABLE pet (name VARCHAR(20), owner VARCHAR(20), species VARCHAR(20), sex CHAR(1), checkups SMALLINT UNSIGNED, birth DATE, death DATE);
 
-. schema
-. table
+SELECT owner, COUNT(*), SPECIES AS num_birds
+FROM pet
+WHERE UPPER(species) = 'BIRD'
+GROUP BY owner;
+
+
+
+
+
+
+
+
+
